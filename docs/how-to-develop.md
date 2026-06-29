@@ -64,5 +64,10 @@ These dependencies will be installed when you run `pip install -r src/requiremen
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
 
+`GET /activities` supports optional query parameters:
+- `day` (example: `Monday`)
+- `start_time` and `end_time` (24-hour format, example: `15:00`)
+- `difficulty` (`Beginner`, `Intermediate`, `Advanced`)
+
 > [!IMPORTANT]
 > All data is stored in memory, which means data will be reset when the server restarts.
